@@ -3,9 +3,9 @@
 	"version": "1.0.0",
 	"description": "Retrium developer code challenge",
 	"scripts": {
-		"start": "nodemon --exec jest",
-		"test": "jest",
-		"test:watch": "jest --watchAll"
+		"build": "webpack --mode production",
+		"start": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+		"test": "jest"
 	},
 	"repository": {
 		"type": "git",
@@ -23,14 +23,21 @@
 		"@babel/node": "^7.4.5",
 		"@babel/plugin-transform-runtime": "^7.4.4",
 		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.10.1",
 		"@babel/runtime": "^7.4.5",
 		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.1.0",
+		"css-loader": "^3.6.0",
 		"eslint": "^5.16.0",
+		"html-loader": "^1.1.0",
+		"html-webpack-plugin": "^4.3.0",
 		"jest": "^26.0.1",
 		"nodemon": "^2.0.3",
 		"prettier": "^1.18.2",
+		"style-loader": "^1.2.1",
 		"webpack": "^4.43.0",
-		"webpack-cli": "^3.3.11"
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.11.0"
 	},
 	"dependencies": {
 		"react": "^16.13.1",
